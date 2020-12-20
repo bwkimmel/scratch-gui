@@ -197,6 +197,33 @@ export default [
         helpLink: 'https://scratch.mit.edu/microbit'
     },
     {
+        name: 'Arduino',
+        extensionId: 'arduino',
+        description: (
+            <FormattedMessage
+                defaultMessage="Arduino"
+                description="Description for the 'arduino' extension"
+                id="gui.extension.arduino.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: false,
+        useAutoScan: false,
+        connectionIconURL: microbitConnectionIconURL,
+        connectionSmallIconURL: microbitConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their micro:bit."
+                id="gui.extension.microbit.connectingMessage"
+            />
+        ),
+        helpLink: 'https://github.com/LLK/scratch-vm/blob/develop/docs/extensions.md'
+    },
+    {
         name: 'LEGO MINDSTORMS EV3',
         extensionId: 'ev3',
         collaborator: 'LEGO',
