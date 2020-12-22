@@ -24,6 +24,11 @@ import microbitInsetIconURL from './microbit/microbit-small.svg';
 import microbitConnectionIconURL from './microbit/microbit-illustration.svg';
 import microbitConnectionSmallIconURL from './microbit/microbit-small.svg';
 
+import arduinoIconURL from './arduino/arduino.png';
+import arduinoInsetIconURL from './arduino/arduino-logo.svg';
+import arduinoConnectionIconURL from './arduino/arduino-illustration.png';
+import arduinoConnectionSmallIconURL from './arduino/arduino-logo.svg';
+
 import ev3IconURL from './ev3/ev3.png';
 import ev3InsetIconURL from './ev3/ev3-small.svg';
 import ev3ConnectionIconURL from './ev3/ev3-hub-illustration.svg';
@@ -199,26 +204,22 @@ export default [
     {
         name: 'Arduino',
         extensionId: 'arduino',
-        description: (
-            <FormattedMessage
-                defaultMessage="Arduino"
-                description="Description for the 'arduino' extension"
-                id="gui.extension.arduino.description"
-            />
-        ),
+        iconURL: arduinoIconURL,
+        insetIconURL: arduinoInsetIconURL,
+        description: "Connect your project with your Arduino.",
         featured: true,
         disabled: false,
         bluetoothRequired: false,
         internetConnectionRequired: false,
-        launchPeripheralConnectionFlow: false,
+        launchPeripheralConnectionFlow: true,
         useAutoScan: false,
-        connectionIconURL: microbitConnectionIconURL,
-        connectionSmallIconURL: microbitConnectionSmallIconURL,
+        connectionIconURL: arduinoConnectionIconURL,
+        connectionSmallIconURL: arduinoConnectionSmallIconURL,
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting"
-                description="Message to help people connect to their micro:bit."
-                id="gui.extension.microbit.connectingMessage"
+                description="Message to help people connect to their Arduino."
+                id="gui.extension.arduino.connectingMessage"
             />
         ),
         helpLink: 'https://github.com/LLK/scratch-vm/blob/develop/docs/extensions.md'
