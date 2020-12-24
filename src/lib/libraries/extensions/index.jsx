@@ -53,6 +53,29 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
     {
+        name: 'Arduino',
+        extensionId: 'arduino',
+        iconURL: arduinoIconURL,
+        insetIconURL: arduinoInsetIconURL,
+        description: "Connect your project with your Arduino.",
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: arduinoConnectionIconURL,
+        connectionSmallIconURL: arduinoConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their Arduino."
+                id="gui.extension.arduino.connectingMessage"
+            />
+        ),
+        helpLink: 'https://github.com/LLK/scratch-vm/blob/develop/docs/extensions.md'
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Music"
@@ -200,29 +223,6 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/microbit'
-    },
-    {
-        name: 'Arduino',
-        extensionId: 'arduino',
-        iconURL: arduinoIconURL,
-        insetIconURL: arduinoInsetIconURL,
-        description: "Connect your project with your Arduino.",
-        featured: true,
-        disabled: false,
-        bluetoothRequired: false,
-        internetConnectionRequired: false,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        connectionIconURL: arduinoConnectionIconURL,
-        connectionSmallIconURL: arduinoConnectionSmallIconURL,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their Arduino."
-                id="gui.extension.arduino.connectingMessage"
-            />
-        ),
-        helpLink: 'https://github.com/LLK/scratch-vm/blob/develop/docs/extensions.md'
     },
     {
         name: 'LEGO MINDSTORMS EV3',
